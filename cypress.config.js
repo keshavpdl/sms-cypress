@@ -5,5 +5,15 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
     },
     baseUrl: 'https://receive-smss.com',
+    reporter: 'cypress-multi-reporters',
+    reporterOptions: {
+      reporterEnabled: 'spec, mochawesome',
+      mochawesomeReporterOptions: {
+        reportDir: 'cypress/reports',
+        overwrite: false,
+        html: false,
+        json: true,
+      },
+    },
   },
 });

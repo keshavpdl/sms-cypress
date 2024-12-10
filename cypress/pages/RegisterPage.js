@@ -25,12 +25,15 @@ class RegisterPage {
     verifyPasswordError() {
       cy.contains(' Passwords should be same and not empty').should('be.visible');
     }
+
     verifyInvalidEmail(){
       cy.contains('ERROR: Please enter a valid confrim email.').should('be.visible')
     }
+
     verifyUsernameEmailError(){
       cy.contains('ERROR: Username or email already exists. Please try another one.').should('be.visible')
     }
+    
   }
   
   export default RegisterPage;

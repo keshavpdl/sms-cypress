@@ -27,13 +27,13 @@ class LoginPage {
         const errorMessage = `Error: The password you entered for the username ${username} is incorrect. Lost your password?`;
         cy.contains(errorMessage).should('be.visible');
       }
+
       verifyInvalidUsernameError(username) {
         const errorMessage = `Error: The username ${username} is not registered on this site. If you are unsure of your username, try your email address instead.`;
         cy.contains(errorMessage).should('be.visible');
       }
+      
   }
 
-
-  
   export default LoginPage;
   

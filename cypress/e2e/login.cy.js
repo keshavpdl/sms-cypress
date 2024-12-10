@@ -13,7 +13,6 @@ describe('Login and Account Access', () => {
     invalidUsername: faker.internet.username(),
     invalidPassword: 'Passw@rd',
     email: 'testme123@tafmail.com'
-
   };
 
   it('Should Validate mandatory field error messages', () => {
@@ -47,6 +46,7 @@ describe('Login and Account Access', () => {
     loginPage.submitLogin();
     loginPage.verifyInvalidPasswordError(userData.username);
   });
+  
   it('Should Sign in with valid Email',()=>{
     loginPage.fillOutLoginForm(
       userData.email,
